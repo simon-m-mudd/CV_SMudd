@@ -1,0 +1,366 @@
+%-----------------------------------------------------
+% Simon M. Mudd CV
+%
+% This CV is loosely based on the template produced by
+% Dario Taraborelli
+% URL: http://nitens.org/taraborelli/cvtex
+%----------------------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.75in, textheight=9.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+%For gentium, you should install the font from here: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=Gentium_basic
+%\setromanfont [Ligatures={Common}, BoldFont={Gentium Basic Bold}, ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+
+%For fontin font, you should install the font from here: http://www.exljbris.com/fontin.html
+%\setromanfont [Ligatures={Common}, BoldFont={Fontin Bold}, ItalicFont={Fontin Italic}]{Fontin}
+
+%For linux libertine font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+% This one seems to be happiest! Least bad boxes. And looks nice
+%\setromanfont [Ligatures={Common}, BoldFont={Linux Libertine Bold}, ItalicFont={Linux Libertine Italic}]{Linux Libertine}
+
+%For Liberation Serif font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+%\setromanfont [Ligatures={Common}, BoldFont={Liberation Serif Bold}, ItalicFont={Liberation Serif Italic}]{Liberation Serif}
+
+%For Heuristica Serif font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+% This one also seems to make XeLaTeX happy
+\setromanfont [Ligatures={Common}, BoldFont={Heuristica Bold}, ItalicFont={Heuristica Italic}]{Heuristica}
+
+\setmonofont[Scale=0.8]{Monaco}
+
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+%columns
+\usepackage{multicol}
+\setlength{\columnsep}{10pt}
+%\def\columnseprulecolor{\color{White}}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Simon M. Mudd - vita},
+	pdfauthor={Simon M. Mudd},
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+
+%Colours
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{Gray}{rgb}{0.3,0.3,0.3}
+\definecolor{LightGray}{rgb}{0.6,0.6,0.6}
+
+% Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{LightGray}{Simon M. Mudd CV, May 20, 2015}}
+\renewcommand{\footrulewidth}{1pt}
+\rfoot{\textcolor{LightGray}{Page \thepage}}
+
+%urls
+\usepackage{url}
+
+% DOCUMENT
+\begin{document}
+{\LARGE Simon Marius Mudd}\\
+\textcolor{Gray}{\large{Reader in Landscape Dynamics}}\\[0.2cm]
+
+\begin{multicols}{2}
+University of Edinburgh\\
+School of GeoSciences\\
+Drummond Street\\
+Edinburgh, EH8 9XP\\
+United Kingdom
+
+\columnbreak
+
+Phone: \texttt{+44~(0)131~650~2535}\\
+Fax: \texttt{+44~(0)131~650~2524}\\
+email: \href{mailto:simon.m.mudd@ed.ac.uk}{simon.m.mudd@ed.ac.uk}\\
+Web: \href{http://www.geos.ed.ac.uk/homes/smudd/}{http://www.geos.ed.ac.uk/homes/smudd/}\\
+Google Scholar: \href{http://scholar.google.com/citations?user=9iv6l7wAAAAJ\&hl=en}{Username Simon M. Mudd}\\ 
+Github: \href{https://github.com/simon-m-mudd}{Username simon-m-mudd}
+
+\end{multicols}
+
+\hrule
+\section*{Appointments}
+\noindent
+\years{2014--}\textbf{Reader} in Landscape Dynamics: School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2013--2014}\textbf{Senior Lecturer} in Landscape Dynamics: School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2007--2013}\textbf{Lecturer} in Landscape Dynamics: School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2006--2007}\textbf{Research Associate}: Department of Earth and Environmental Sciences, Vanderbilt University, USA\\[0.05cm]
+
+
+\hrule
+\section*{Education}
+\noindent
+\years{2006}\textbf{PhD} in \textit{Environmental Engineering} with an emphasis in Environmental Science, Vanderbilt University, Nashville TN, USA\\[0.05cm]
+\years{2001}\textbf{MA} in \textit{Geological Sciences}, University of California, Santa Barbara, CA, USA\\[0.05cm]
+\years{1999}\textbf{BA} in \textit{Geology} (minor in German) University of California, Berkeley, CA, USA\\[0.05cm]
+
+\hrule
+\section*{Awards}
+\noindent
+\years{2014}\textbf{Gordon Warwick Medal} from the British Society for Geomorphology (for excellence in geomorphic research by someone within 15 years of PhD)\\Nominated for Edinburgh University Student Association best course award (Earth Surface Systems)\\[0.05cm]
+\years{2013}\textbf{Arne Richter Award} for Outstanding Young Scientists of the European Geosciences Union\\[0.05cm]
+\years{2012}Nominated for Edinburgh University Student Association best course award (for eroding landscapes co-taught with Mikael Attal)\\Nominated for Edinburgh University Student Association teaching award\\[0.05cm]
+\years{2011}\textbf{Penck Lecture}, EGU general assembly\\[0.05cm]
+\years{2005}\textbf{Dissertation Enhancement Grant} awarded by Vanderbilt University Graduate School\\[0.05cm]
+\years{2001}\textbf{George Tunnel Memorial Fellowship} awarded by UCSB department of Geological Sciences\\[0.05cm]
+\years{1999--2000}University of California \textbf{Graduate Opportunity Fellowship}\\[0.05cm] 
+
+\hrule
+\section*{External Funding}
+\noindent
+\years{2014--2015}Leverhulme Trust International Academic Fellowship (Iaf-2014-009)\\ Funding Agency: \textit{Leverhulme Trust}\\Award: \textbf{£24,064} FEC to Edinburgh\\P.I.: Simon M. Mudd\\[0.05cm]
+\years{2013--2015}Constraining the topographic signature of erosion rates and processes using high resolution topography (W911NF-13-1-0478)\\Funding Agency: \textit{US Army Research Office}\\Award: \textbf{£150,492} to Edinburgh\\[0.05cm]P.I.: Simon M. Mudd\\[0.05cm]
+\years{2012--2015}Climate History Controls Future Landslide Hazard (Ne/J009970/1)\\Funding Agency: \textit{NERC}\\Award: \textbf{£109,154} FEC to Edinburgh\\P.I.: Tristam Hales (Cardiff University) Co.I. Simon M. Mudd\\[0.05cm]
+\years{2012--2015}Using high resolution topographic data to detect regions of high seismic hazard from space\\Funding Agency: \textit{Carnegie Trust grants for aid in research}\\Award: \textbf{£39,091}\\P.I. Simon M. Mudd\\[0.05cm]
+\years{2012--2015}Predicting the distribution of major debris flow hazard using coupled 10Be erosion records and 1m resolution digital topography (NE/J012750/1)\\Funding Agency: \textit{NERC}\\Award: \textbf{£64,959} FEC to Edinburgh\\[0.05cm]P.I.: Simon M. Mudd\\[0.05cm]
+\years{2012--2013}Tectonic and climatic control of hillslope lengths in granitic landscapes\\Funding Agency: \textit{Carnegie Trust grants for aid in research}\\Award: \textbf{£2,200} FEC to Edinburgh\\P.I.: Simon M. Mudd\\[0.05cm]
+\years{2012--2013}Can long-term landscape change predict the impact of extreme events? A test from the flashfloods of the upper Indus Valley, Ladakh, 6th August 2010\\Funding Agency: \textit{NERC}\\Award: \textbf{£61,339} FEC\\P.I.: Hugh Sinclair, Co.I.: Simon M. Mudd\\[0.05cm]
+\years{2009--2010}A coupled geomorphic and geochemical model for testing the dominant controls on chemical weathering rates in eroding landscapes (NE/H001174/1)\\Funding agency: \textit{NERC}\\Award:  \textbf{£70,478} FEC\\P.I.: Simon M. Mudd\\[0.05cm]
+\years{2009--2010}Investigating the coupled response of rivers and hillslopes to tectonic perturbation\\Funding Agency: \textit{Carnegie Trust grants for aid in research}\\Award: \textbf{£2,430}\\P.I.: Simon M. Mudd\\[0.05cm]
+
+\hrule
+\section*{Editorial Activities}
+\years{2013--}\textbf{Associate Editor}, Earth Surface Dynamics\\[0.05cm]	
+\years{2008--2013}\textbf{Associate Editor}, Journal of Geophysical Research-Earth Surface\\[0.05cm]	
+\years{2009--2011}\textbf{Editorial Board}, Geology\\[0.05cm]	
+
+\hrule
+\section*{Administration}
+\years{2014--}\textbf{Deputy Director}, Edinburgh E3 NERC Doctoral Training Partnership\\[0.05cm]	
+\years{2014}\textbf{Chair}, Digital Communications and Web  Strategy Working Group, School of GeoSciences, University of Edinburgh\\[0.05cm]
+\years{2011--2013}\textbf{Coordinator of PhD recruitment}, Global Change Research Institute, School of GeoSciences, University of Edinburgh\\[0.05cm]	
+
+\hrule
+\section*{Service}
+\years{2015}\textbf{Convener}, EGU general assembly: HS10.1/GM8.3/OS2.5 Estuarine processes\\[0.05cm]
+\years{2014--}\textbf{External examiner}: University of Manchester, Masters in Environmental Modelling, Monitoring and Reconstruction\\[0.05cm]
+\years{2014}\textbf{Convener}, EGU general assembly: HS10.1/GM8.4 Estuarine processes\\[0.05cm]
+\years{2013}\textbf{Convener}, EGU general assembly: HS10.3 Estuarine processes\\[0.05cm]
+\years{2012}\textbf{Convener}, 29th IUGG Conference on Mathematical Geophysics: Earth Systems Dynamics session\\[0.05cm]
+\years{2012}\textbf{Convener}, EGU general assembly: HS10.2/GM8.2 Estuarine processes\\[0.05cm]
+\years{2011}\textbf{Convener}, fall AGU Session: Coastal Geomorphology and Morphodynamics\\[0.05cm]
+\years{2010--}\textbf{Member}, NERC peer review college\\[0.05cm]
+\years{2009}\textbf{Convener}, fall AGU Session: 'Sediment Supply, Storage, and Delivery as Controlled by Hillslope Channel Coupling'\\[0.05cm]
+\years{2009}\textbf{Co-Convener}, EGU general meeting session: 'Novel approaches to quantifying the timing and rate of landscape change'\\[0.05cm]
+\years{2008}\textbf{Delegate}: Meeting of Young Researchers in Earth Sciences III held in New Orleans, LA\\[0.05cm] 
+\years{2007--2014}\textbf{Member, Global Change Research Group Committee}: School of GeoSciences, University of Edinburgh\\[0.05cm]
+\years{2007--}\textbf{Director of Studies then personal tutor}: For Geology and Physical Geography program, School of Geosciences, University of Edinburgh\\[0.05cm]
+\years{2007}\textbf{Convener}, fall AGU Session: 'Controls on Geochemical and Biogeochemical Processes in the Critical Zone'\\[0.05cm]
+\years{2006--}\textbf{Proposal Peer Reviewer}: The Natural Environment Research Council, U.K.; The National Science Foundation (NSF); Carnegie Foundation for Grants in Aid of Research; French National Research Agency (ANR); Swiss National Research Agency; Research Foundation Flanders (FWO); U.S. Army Research Office (ARO); US-Israel Binational Science Foundation\\[0.05cm]
+\years{2004--}\textbf{Journal Peer Reviewer}: American Journal of Science; AGU books; Basin Research; Earth and Planetary Science Letters; Earth's Future; Earth Surface Processes and Landforms; Ecology; Estuarine, Coastal and Shelf Science; Estuaries and Coasts; Earth Surface Dynamics; Geology; Geomorphology; Geophysical Research Letters; Global Biogeochemical Cycles; Geochimica et Cosmochimica Acta; Journal of Geophysical Research-Earth Surface; Journal of Geophysical Research-Biogeosciences; Journal of Hydrology; Limnology and Oceanography; Marine Biology; Nature; Nature Geoscience; Pedosphere; Water Resources Research\\[0.05cm]
+\years{2005--2007}\textbf{Seminar Series Committee Member}: Vanderbilt University Department of Earth and Environmental Sciences\\[0.05cm]
+\years{2004--2006}\textbf{Graduate Student Representative}: Vanderbilt University Department of Earth and Environmental Sciences\\[0.05cm]
+\years{2003}\textbf{Graduate Student Representative}: Florida State University department of Geological Sciences\\[0.05cm]
+
+\hrule
+\section*{Invited Talks}
+\years{2015}\textbf{Department of Land, Environment, Agriculture and Forestry, University of Padova}, Department Seminar\\[0.05cm]
+\years{2014}\textbf{Soil carbon session, EGU general assembly}, Invited talk\\[0.05cm]
+\textbf{Institute of Earth Sciences, University of Lausanne}, Department Seminar\\[0.05cm]
+\textbf{Department of Geosciences, University of Padova}, Department Seminar\\[0.05cm]
+\textbf{Geochemistry of the Earth Surface-GES10, Paris}, Keynote Talk\\[0.05cm]
+\textbf{Gordon Warwick Medal Talk, British Society for Geomorphology}, Keynote Talk\\[0.05cm]
+\years{2013}\textbf{Keynote Lecture for Arne Richter Award}, EGU general assembly\\[0.05cm]
+\textbf{Department of Earth Science and Engineering, Imperial College London},  Department Seminar\\[0.05cm]
+\textbf{School of Geographical Sciences, University of Bristol}, Department seminar\\[0.05cm]  
+\years{2012}\textbf{Soil carbon session, EGU general assembly}, Invited talk\\[0.05cm]
+\textbf{Modelling and geochemistry session, Goldschmidt conference, Montreal Canada}, Invited talk\\[0.05cm]
+\textbf{Institute of Geology and Mineralogy, University of Cologne}, Department Seminar\\[0.05cm]
+\textbf{School of Geographical and Earth Sciences, University of Glasgow}, Department Seminar\\[0.05cm]
+\years{2011}\textbf{Penck Keynote Lecture} (given to outstanding young geomorphologist), EGU general assembly\\[0.05cm]
+\textbf{Department of Geography and Environmental Engineering, Johns Hopkins University}, Department seminar\\[0.05cm]
+\textbf{European Surface Processes Meeting, Loch Lomond, Scotland}, Invited talk\\[0.05cm]
+\textbf{LUCIFS soil carbon workshop, Bern Switzerland}, Invited talk\\[0.05cm]
+\textbf{DEFRA soil erosion workshop, Exeter UK}, Invited talk\\[0.05cm]
+\years{2010}\textbf{Department of Geography and Geosciences, University of St. Andrews}, Department seminar\\[0.05cm]
+\textbf{University of Rennes, Department of Geosciences}, Department seminar\\[0.05cm]
+\years{2009}\textbf{INSTAAR/Geography, University of Colorado}, Department seminar\\[0.05cm]
+\textbf{Department of Geography, Durham University}, Department seminar\\[0.05cm]
+\textbf{Department of Earth Sciences, Oxford University}, Department seminar\\[0.05cm]
+\textbf{School of Earth and Ocean Sciences, Cardiff University}, Department seminar\\[0.05cm]
+\years{2008}\textbf{SAGES annual meeting, Aberfoyle, Scotland}, Invited talk\\[0.05cm]
+\years{2007}\textbf{University of Exeter, Department of Geography}, Department seminar\\[0.05cm]
+\years{2006}\textbf{Department of Environmental Science, Policy, and Management, University of California, Berkeley}, Department seminar\\[0.05cm]
+\textbf{Department of Earth Sciences, Boston University}, Department seminar\\[0.05cm]
+\textbf{Department of Geology and Geophysics, University of Wisconsin at Madison}, Department seminar\\[0.05cm]
+
+
+
+\hrule
+\section*{PhD Students Supervised}
+\years{2015--}\textbf{Noorzalianee Ghazali}, Malaysian Government Studentship\\[0.05cm]
+\years{2013--}\textbf{Fiona Clubb}, Carnegie Caledonian Studentship\\[0.05cm]
+\years{2013--}\textbf{Stuart Grieve}, NERC Tied PhD studentship\\[0.05cm]
+\years{2011--}\textbf{David Milodowski}, NERC PhD studentship\\[0.05cm]
+\years{2018--2012}\textbf{Martin Hurst}, NERC PhD studentship (Now at British Geological Survey)\\[0.05cm]
+\years{2010--2011}\textbf{Lynsey Callaghan}, NERC PhD studentship (inherited student, graduated 2011, now a freelance science writer)\\[0.05cm]
+
+\hrule
+\section*{Post Doctoral Supervision}
+\years{2014--}Marie-Alice Harel\\[0.05cm]
+\years{2012--2013}Daniel Hobley (Lead supervisor: Hugh Sinclair)\\[0.05cm]
+
+\hrule
+\section*{Courses Taught}
+\years{2015--}Numeracy, Modelling and Data Management (PhD students)\\[0.05cm]
+\years{2014--}Frontiers in Geosciences (seminar series for PhD students)\\[0.05cm]
+\years{2013--}Environmental Modelling and Prediction (1st year undergraduate; course organizer)\\[0.05cm] 
+\years{2010--2012}Geomorphology at the University of Edinburgh (2nd year undergraduate)\\[0.05cm]
+\years{2009--}Eroding Landscapes at the University of Edinburgh (3rd/4th year undergraduate). Nominated for an Edinburgh University Students Association Teaching award 'best course' in 2012\\[0.05cm]
+\years{2008--2013}Tectonic Geomorphology at the University of Edinburgh (4th year undergraduate)\\[0.05cm]
+\years{2008--2014}Spain Field course at the University of Edinburgh (3rd year undergraduate; Course Organizer from 2010)\\[0.05cm]
+\years{2008--2014}Earth Surface Systems at the University of Edinburgh (1st year undergraduate; Course Organizer from 2009). Nominated for an Edinburgh University Students Association Teaching award 'best course' in 2014\\[0.05cm] 
+\years{2007--2011}Northwest Scotland Field course at the University of Edinburgh (3rd year undergraduate)\\[0.05cm]
+\years{2007--}Field teaching on day trips for sedimentology (2nd year undergraduate, 1 day) and Earth Materials (1st year undergraduate, 1 day)\\[0.05cm]
+\years{2006}Geomorphology at Vanderbilt University (with David Furbish; undergraduate and postgraduate)\\[0.05cm]
+
+\hrule
+\section*{Software}
+My group has released several software packages to the community, including:
+\subsection*{Tools}
+\years{CSDMS}A tool for examining changes in normalised channel steepness. Simon M. Mudd was the lead developer. \href{http://csdms.colorado.edu/wiki/Model:Chi_analysis_tools}{Link to chi analysis tool on CSDMS}\\[0.05cm]
+A tool for quantifying surface roughness from LiDAR data, with the application of detecting rock outcrops. PhD student David T. Milodowski was the lead developer. \href{http://csdms.colorado.edu/wiki/Model:SurfaceRoughness}{Link to surface roughness tool on CSDMS}\\[0.05cm]
+A tool for detecting channel heads from LiDAR data. PhD student Fiona J. Clubb was the lead developer. \href{http://csdms.colorado.edu/wiki/Model:DrEICH_algorithm}{Link to driech algorithm on CSDMS}\\[0.05cm]
+
+\years{Github}A variety of scripts for both computation and visualization can be found on my github page: username \href{https://github.com/simon-m-mudd}{simon-marius-mudd}
+
+\subsection*{Documentation}Online documentation of our tools and methods can be found at:\\[0.05cm]
+\url{http://www.geos.ed.ac.uk/~smudd/LSDTT_docs/html/}\\[0.05cm]
+\url{http://www.geos.ed.ac.uk/~smudd/TopoTutorials/html/}\\[0.05cm]
+\url{http://www.geos.ed.ac.uk/~s0675405/LSD_Docs/index.html}\\[0.05cm]
+\url{http://www.geos.ed.ac.uk/~smudd/NMDM_Course/html/index.html}\\[0.05cm]
+
+
+
+
+
+
+\hrule
+\section*{Publications}
+Click on the doi to link to the paper. A number of these are behind paywalls, so alternatively see \href{http://www.geos.ed.ac.uk/homes/smudd/publications.html}{http://www.geos.ed.ac.uk/homes/smudd/publications.html} for links to pdfs. Citation metrics can be found at \href{http://scholar.google.com/citations?user=9iv6l7wAAAAJ\&hl=en}{Google Scholar; username Simon M. Mudd}. 
+
+\subsection*{Journal articles}
+%\noindent
+
+\raggedright
+% In review papers. These can be commented out if you want to hide them
+%\years{in review}\hangindent=0.7cm\textbf{38.} 
+
+\years{in press}\hangindent=0.7cm\textbf{38.} Gabet, E. J., S. M. Mudd, D. T. Milodowski, K. Yoo, M. D. Hurst, and A. Dosseto (in press), Local topography and erosion rate control regolith thickness along a ridgeline in the Sierra Nevada, California, \textit{Earth Surf. Process. Landforms}, \href{http://dx.doi.org/doi:10.1002/esp.3754}{doi:10.1002/esp.3754}.
+
+\years{2015}\hangindent=0.7cm\textbf{37.} Milodowski, D. T., S. M. Mudd, and E. T. A. Mitchard (2015), Erosion rates as a potential bottom-up control of forest structural characteristics in the Sierra Nevada Mountains, \textit{Ecology}, 96(1), 31-38, \href{http://dx.doi.org/doi:10.1890/14-0649.1.sm}{doi:10.1890/14-0649.1.sm}.\par
+\hangindent=0.7cm\textbf{36.} Attal, M., S. M. Mudd, M. D. Hurst, B. Weinman, K. Yoo, and M. Naylor (2015), Impact of change in erosion rate and landscape steepness on hillslope and fluvial sediments grain size in the Feather River basin (Sierra Nevada, California), \textit{Earth Surface Dynamics}, 3(1), 201-222, \href{http://dx.doi.org/doi:10.5194/esurf-3-201-2015}{doi:10.5194/esurf-3-201-2015}.\par
+\hangindent=0.7cm\textbf{35.} Milodowski, D. T., S. M. Mudd, and E. T. A. Mitchard (2015), Topographic roughness as a signature of the emergence of bedrock in eroding landscapes, \textit{Earth Surface Dynamics Discussions}, 3(2), 371-416, \href{http://dx.doi.org/doi:10.5194/esurfd-3-371-2015}{doi:10.5194/esurfd-3-371-2015}.\par
+
+\years{2014}\hangindent=0.7cm\textbf{34.} Johnson, M. O., S. M. Mudd, B. Pillans, N. A. Spooner, L. K. Fifield, M. J. Kirkby, and M. Gloor (2014), Quantifying the rate and depth dependence of bioturbation based on optically-stimulated luminescence (OSL) dates and meteoric Be-10, \textit{Earth Surface Processes and Landforms}, 39(9), 1188-1196, \href{http://dx.doi.org/doi:10.1002/esp.3520}{doi:10.1002/esp.3520}.\par
+\hangindent=0.7cm\textbf{33.} Clubb, F. J., S. M. Mudd, D. T. Milodowski, M. D. Hurst, and L. J. Slater (2014), Objective extraction of channel heads from high-resolution topographic data, \textit{Water Resources Research}, 50(5), 4283-4304, \href{http://dx.doi.org/doi:10.1002/2013WR015167}{doi:10.1002/2013WR015167}.\par
+\hangindent=0.7cm{\footnotesize \textit{Comment}: Passalacqua, P., and E. Foufoula-Georgiou (2015), Comment on 'Objective extraction of channel heads from high-resolution topographic data' by Fiona J. Clubb et al., \textit{Water Resour. Res.}, 51(2), 1372-1376, \href{http://dx.doi.org/doi:10.1002/2014WR016412}{doi:10.1002/2014WR016412}.}\par
+\hangindent=0.7cm{\footnotesize \textit{Reply}: Clubb, F., S. Mudd, and D. Milodowski (2015), Reply to comment by P. Passalacqua and E. Foufoula-Georgiou on 'Objective extraction of channel heads from high-resolution topographic data,' \textit{Water Resour. Res.}, 51(2), 1377-1379, \href{http://dx.doi.org/doi:10.1002/2014WR016603}{doi:10.1002/2014WR016603}.}\par 
+\hangindent=0.7cm\textbf{32.} Mudd, S. M., M. Attal, D. T. Milodowski, S. W. D. Grieve, and D. A. Valters (2014a), A statistical framework to quantify spatial variation in channel gradients using the integral method of channel profile analysis, \textit{Journal of Geophysical Research-Earth Surface}, 119(2), 138-152, \href{http://dx.doi.org/doi:10.1002/2013JF002981}{doi:10.1002/2013JF002981}.\par
+
+\years{2013}\hangindent=0.7cm\textbf{31.} Hoffmann, T. et al. (2013), Short Communication: Humans and the missing C-sink: erosion and burial of soil carbon through time, textit{Earth Surface Dynamics}, 1(1), 45-52, \href{http://dx.doi.org/doi:10.5194/esurf-1-45-2013}{doi:10.5194/esurf-1-45-2013}.\par
+\hangindent=0.7cm\textbf{30.} Hurst, M. D., S. M. Mudd, M. Attal, and G. Hilley (2013a), Hillslopes Record the Growth and Decay of Landscapes, \textit{Science}, 341(6148), 868-871, \href{http://dx.doi.org/doi:10.1126/science.1241791}{doi:10.1126/science.1241791}.\par
+\hangindent=0.7cm\textbf{29.} Hurst, M. D., S. M. Mudd, K. Yoo, M. Attal, and R. Walcott (2013b), Influence of lithology on hillslope morphology and response to tectonic forcing in the northern Sierra Nevada of California, \textit{Journal of Geophysical Research-Earth Surface}, 118(2), 832-851, \href{http://dx.doi.org/doi:10.1002/jgrf.20049}{doi:10.1002/jgrf.20049}.\par
+
+\years{2012}\hangindent=0.7cm\textbf{28.} Constantine, J. A., M.-J. Schelhaas, E. Gabet, and S. M. Mudd (2012), Limits of windthrow-driven hillslope sediment flux due to varying storm frequency and intensity, \textit{Geomorphology}, 175, 66-73, \href{http://dx.doi.org/doi:10.1016/j.geomorph.2012.06.022}{doi:10.1016/j.geomorph.2012.06.022}.\par
+\hangindent=0.7cm\textbf{27.} Kirwan, M. L., and S. M. Mudd (2012), Response of salt-marsh carbon accumulation to climate change, \textit{Nature}, 489(7417), 550-553, \href{http://dx.doi.org/doi:10.1038/nature11440}{doi:10.1038/nature11440}.\par
+\hangindent=0.7cm\textbf{26.} Bilotta, G. S., M. Grove, and S. M. Mudd (2012), Assessing the significance of soil erosion, \textit{Transactions of the Institute of British Geographers}, 37(3), 342-345, \href{http://dx.doi.org/doi:10.1111/j.1475-5661.2011.00497.x}{doi:10.1111/j.1475-5661.2011.00497.x}.\par
+\hangindent=0.7cm\textbf{25.} Hobley, D. E. J., H. D. Sinclair, and S. M. Mudd (2012), Reconstruction of a major storm event from its geomorphic signature: The Ladakh floods, 6 August 2010, \textit{Geology}, 40(6), 483-486, \href{http://dx.doi.org/doi:10.1130/G32935.1}{doi:10.1130/G32935.1}.\par
+\hangindent=0.7cm\textbf{24.} Hurst, M. D., S. M. Mudd, R. Walcott, M. Attal, and K. Yoo (2012), Using hilltop curvature to derive the spatial distribution of erosion rates, \textit{Journal of Geophysical Research-Earth Surface}, 117, F02017, \href{http://dx.doi.org/doi:10.1029/2011JF002057}{doi:10.1029/2011JF002057}.\par
+\hangindent=0.7cm\textbf{23.} Ghahramani, A., I. Yoshiharu, and S. M. Mudd (2012), Field experiments constraining the probability distribution of particle travel distances during natural rainstorms on different slope gradients, \textit{Earth Surface Processes and Landforms}, 37(5), 473-485, \href{http://dx.doi.org/doi:10.1002/esp.2253}{doi:10.1002/esp.2253}.\par
+\hangindent=0.7cm\textbf{22.} Fagherazzi, S. et al. (2012), Numerical Models of Salt Marsh Evolution: Ecological, Geomorphic, and Climatic Factors, \textit{Reviews of Geophysics}, 50, RG1002, \href{http://dx.doi.org/doi:10.1029/2011RG000359}{doi:10.1029/2011RG000359}.\par
+
+\years{2011}\hangindent=0.7cm\textbf{21.} D'Alpaos, A., S. M. Mudd, and L. Carniello (2011), Dynamic response of marshes to perturbations in suspended sediment concentrations and rates of relative sea level rise, \textit{Journal of Geophysical Research-Earth Surface}, 116, F04020, \href{http://dx.doi.org/doi:10.1029/2011JF002093}{doi:10.1029/2011JF002093}.\par
+\hangindent=0.7cm\textbf{20.} Hobley, D. E. J., H. D. Sinclair, S. M. Mudd, and P. A. Cowie (2011), Field calibration of sediment flux dependent river incision, \textit{Journal of Geophysical Research-Earth Surface}, 116, F04017, \href{http://dx.doi.org/doi:10.1029/2010JF001935}{doi:10.1029/2010JF001935}.\par
+
+\years{2010}\hangindent=0.7cm\textbf{19.} Kirwan, M. L., G. R. Guntenspergen, A. D'Alpaos, J. T. Morris, S. M. Mudd, and S. Temmerman (2010), Limits on the adaptability of coastal marshes to rising sea level, \textit{Geophysical Research Letters}, 37, L23401, \href{http://dx.doi.org/doi:10.1029/2010GL045489}{doi:10.1029/2010GL045489}.\par
+\hangindent=0.7cm\textbf{18.} Gabet, E. J., and S. M. Mudd (2010), Bedrock erosion by root fracture and tree throw: A coupled biogeomorphic model to explore the humped soil production function and the persistence of hillslope soils, \textit{Journal of Geophysical Research-Earth Surface}, 115, F04005, \href{http://dx.doi.org/doi:10.1029/2009JF001526}{doi:10.1029/2009JF001526}.\par
+\hangindent=0.7cm\textbf{17.} Mudd, S. M., and K. Yoo (2010), Reservoir theory for studying the geochemical evolution of soils, \textit{Journal of Geophysical Research-Earth Surface}, 115, F03030, \href{http://dx.doi.org/doi:10.1029/2009JF001591}{doi:10.1029/2009JF001591}.\par
+\hangindent=0.7cm\textbf{16.} Mudd, S. M., A. D'Alpaos, and J. T. Morris (2010), How does vegetation affect sedimentation on tidal marshes? Investigating particle capture and hydrodynamic controls on biologically mediated sedimentation, \textit{Journal of Geophysical Research-Earth Surface}, 115, F03029, \href{http://dx.doi.org/doi:10.1029/2009JF001566}{doi:10.1029/2009JF001566}.\par
+\hangindent=0.7cm\textbf{15.} Dunne, T., D. V. Malmon, and S. M. Mudd (2010), A rain splash transport equation assimilating field and laboratory measurements, \textit{Journal of Geophysical Research-Earth Surface}, 115, F01001, \href{http://dx.doi.org/doi:10.1029/2009JF001302}{doi:10.1029/2009JF001302}.\par
+
+\years{2009}\hangindent=0.7cm\textbf{14.} Yoo, K., S. M. Mudd, J. Sanderman, R. Amundson, and A. Blum (2009), Spatial patterns and controls of soil chemical weathering rates along a transient hillslope, \textit{Earth and Planetary Science Letters}, 288(1-2), 184-193, \href{http://dx.doi.org/doi:10.1016/j.epsl.2009.09.021}{doi:10.1016/j.epsl.2009.09.021}.\par
+\hangindent=0.7cm\textbf{13.} Bo, S., M. J. Siegert, S. M. Mudd, D. Sugden, S. Fujita, C. Xiangbin, J. Yunyun, T. Xueyuan, and L. Yuansheng (2009), The Gamburtsev mountains and the origin and early evolution of the Antarctic Ice Sheet, \textit{Nature}, 459(7247), 690-693, \href{http://dx.doi.org/doi:10.1038/nature08024}{doi:10.1038/nature08024}.\par
+\hangindent=0.7cm\textbf{12.} Mudd, S. M., S. M. Howell, and J. T. Morris (2009), Impact of dynamic feedbacks between sedimentation, sea-level rise, and biomass production on near-surface marsh stratigraphy and carbon accumulation, \textit{Estuarine Coastal and Shelf Science}, 82(3), 377-389, \href{http://dx.doi.org/doi:10.1016/j.ecss.2009.01.028}{doi:10.1016/j.ecss.2009.01.028}.\par
+\hangindent=0.7cm\textbf{11.} Gabet, E. J., and S. M. Mudd (2009), A theoretical model coupling chemical weathering rates with denudation rates, \textit{Geology}, 37(2), 151-154, \href{http://dx.doi.org/doi:10.1130/G25270A.1}{doi:10.1130/G25270A.1}.\par
+
+\years{2008}\hangindent=0.7cm\textbf{10.} Yoo, K., and S. M. Mudd (2008b), Toward process-based modeling of geochemical soil formation across diverse landforms: A new mathematical framework, \textit{Geoderma}, 146(1-2), 248-260, \href{http://dx.doi.org/doi:10.1016/j.geoderma.2008.05.029}{doi:10.1016/j.geoderma.2008.05.029}.\par
+\hangindent=0.7cm\textbf{9.} Yoo, K., and S. M. Mudd (2008a), Discrepancy between mineral residence time and soil age: Implications for the interpretation of chemical weathering rates, \textit{Geology}, 36(1), 35-38, \href{http://dx.doi.org/doi:10.1130/G24285A.1}{doi:10.1130/G24285A.1}.\par
+
+\years{2007}
+\hangindent=0.7cm\textbf{8.} Mudd, S. M., and D. J. Furbish (2007), Responses of soil-mantled hillslopes to transient channel incision rates, \textit{Journal of Geophysical Research-Earth Surface}, 112(F3), F03S18, \href{http://dx.doi.org/doi:10.1029/2006JF000516}{doi:10.1029/2006JF000516}.\par
+\hangindent=0.7cm\textbf{7.} Furbish, D. J., K. K. Hamner, M. Schmeeckle, M. N. Borosund, and S. M. Mudd (2007), Rain splash of dry sand revealed by high-speed imaging and sticky paper splash targets, \textit{Journal of Geophysical Research-Earth Surface}, 112(F1), F01001, \href{http://dx.doi.org/doi:10.1029/2006JF000498}{doi:10.1029/2006JF000498}.\par
+
+\years{2006}\hangindent=0.7cm\textbf{6.} D'Alpaos, A., S. Lanzoni, S. M. Mudd, and S. Fagherazzi (2006), Modeling the influence of hydroperiod and vegetation on the cross-sectional formation of tidal channels, \textit{Estuarine Coastal and Shelf Science}, 69(3-4), 311-324, \href{http://dx.doi.org/doi:10.1016/j.ecss.2006.05.002}{doi:10.1016/j.ecss.2006.05.002}.\par
+\hangindent=0.7cm\textbf{5.} Mudd, S. M., and D. J. Furbish (2006), Using chemical tracers in hillslope soils to estimate the importance of chemical denudation under conditions of downslope sediment transport, \textit{Journal of Geophysical Research-Earth Surface}, 111(F2), F02021, \href{http://dx.doi.org/doi:10.1029/2005JF000343}{doi:10.1029/2005JF000343}.\par
+\hangindent=0.7cm\textbf{4.} Mudd, S. M. (2006), Investigation of the hydrodynamics of flash floods in ephemeral channels: Scaling analysis and simulation using a shock-capturing flow model incorporating the effects of transmission losses, \textit{Journal of Hydrology}, 324(1-4), 65-79, \href{http://dx.doi.org/doi:10.1016/j.jhydrol.2005.09.012}{doi:10.1016/j.jhydrol.2005.09.012}.\par
+\hangindent=0.7cm{\footnotesize \textit{Comment}: Cao, Z., and Z. Yue (2007), Comment on 'Investigation of the hydrodynamics of flash floods in ephemeral channels: Scaling analysis and simulation using a shock-capturing flow model incorporating the effects of transmission losses' by S.M. Mudd, 2006 (Journal of Hydrology) 324, 65-79, \textit{Journal of Hydrology}, 336(1-2), 222-225, \href{http://dx.doi.org/doi:10.1016/j.jhydrol.2006.11.022}{doi:10.1016/j.jhydrol.2006.11.022}.}\par
+\hangindent=0.7cm{\footnotesize \textit{Reply}: Mudd, S. M. (2007), Reply to 'Comment on 'Investigation of the hydrodynamics of flash floods in ephemeral channels: Scaling analysis and simulation using a shock-capturing flow model incorporating the effects of transmission losses' by S.M. Mudd, 2006 (Journal of Hydrology) 324, 65-79' by Cao and Yue, \textit{Journal of Hydrology}, 336(1-2), 226-230, \href{http://dx.doi.org/doi:10.1016/j.jhydrol.2006.11.008}{doi:10.1016/j.jhydrol.2006.11.008}.}\par 
+\hangindent=0.7cm\textbf{3.} Gabet, E. J., and S. M. Mudd (2006), The mobilization of debris flows from shallow landslides, \textit{Geomorphology}, 74(1-4), 207-218, \href{http://dx.doi.org/doi:10.1016/j.geomorph.2005.08.013}{doi:10.1016/j.geomorph.2005.08.013}.\par
+
+\years{2005}\hangindent=0.7cm\textbf{2.} Mudd, S. M., and D. J. Furbish (2005), Lateral migration of hillcrests in response to channel incision in soil-mantled landscapes, \textit{Journal of Geophysical Research-Earth Surface}, 110(F4), F04026, \href{http://dx.doi.org/doi:10.1029/2005JF000313}{doi:10.1029/2005JF000313}.\par
+
+\years{2004}\hangindent=0.7cm\textbf{1.} Mudd, S. M., and D. J. Furbish (2004), Influence of chemical denudation on hillslope morphology, \textit{Journal of Geophysical Research-Earth Surface}, 109(F2), F02001, \href{http://dx.doi.org/doi:10.1029/2003JF000087}{doi:10.1029/2003JF000087}.\par
+
+\subsection*{Book Chapters}
+\noindent
+\years{2013}\hangindent=0.7cm\textbf{2.} Mudd, S. M., K. Yoo, and E. J. Gabet (2013), 7.5 Influence of Chemical Weathering on Hillslope Forms, in \textbf{Treatise on Geomorphology}, edited by J. F. Shroder, pp. 56-65, Academic Press, San Diego, \href{http://dx.doi.org/doi:10.1016/B978-0-12-374739-6.00148-2}{doi:10.1016/B978-0-12-374739-6.00148-2}.\par
+\years{2004}\hangindent=0.7cm\textbf{1.} Mudd, S. M., S. Fagherazzi, J. T. Morris, and D. J. Furbish (2004), Flow, sedimentation, and biomass production on a vegetated salt marsh in South Carolina: Toward a predictive model of marsh morphologic and ecologic evolution, edited by S. Fagherazzi, M. Marani, and L. K. Blum, \textbf{Ecogeomorphology of Tidal Marshes}, 59, 165-188, \href{http://dx.doi.org/doi:10.1029/CE059p0165}{doi:10.1029/CE059p0165}.\par
+
+\subsection*{Extended Abstracts, Commentaries, and Other Contributions}
+\noindent
+\years{2014}\hangindent=0.7cm\textbf{4.} Mudd, S. M., K. Yoo, and B. Weinman (2014), Quantifying geomorphic controls on time in weathering systems, edited by J. Gaillardet, \textit{Geochemistry of the Earth's Surface Ges-10}, 10, 249-253, \href{http://dx.doi.org/doi:10.1016/j.proeps.2014.08.033}{doi:10.1016/j.proeps.2014.08.033}.\par
+\hangindent=0.7cm\textbf{3.} Mudd, S. M. (2014), Slope Processes, \textbf{Oxford Bibliographies}, \href{http://dx.doi.org/doi:10.1093/OBO/9780199874002-0083}{doi:10.1093/OBO/9780199874002-0083}.\par 
+\years{2011}\hangindent=0.7cm\textbf{2.} Mudd, S. M. (2011), The life and death of salt marshes in response to anthropogenic disturbance of sediment supply, \textit{Geology}, 39(5), 511-512, \href{http://dx.doi.org/doi:10.1130/focus052011.1}{doi:10.1130/focus052011.1}.\par
+\years{2009}\hangindent=0.7cm\textbf{1.} Yoo, K., B. Weinman, S. M. Mudd, M. Hurst, M. Attal, and K. Maher (2011), Evolution of hillslope soils: The geomorphic theater and the geochemical play, \textit{Applied Geochemistry}, 26, S149-S153, \href{http://dx.doi.org/doi:10.1016/j.apgeochem.2011.03.054}{doi:10.1016/j.apgeochem.2011.03.054}.\par
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+
+
+
+\begin{center}
+
+\end{center}
+
+\end{document}
