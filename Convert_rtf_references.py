@@ -62,7 +62,7 @@ def read_rtf_references(filename):
     # replace the dois with html links to doi.org
     for line in lines:
         p2 = re.compile('doi:( [^}]* ).\\\\', re.VERBOSE)
-        line = p2.sub(r'href{http://doi.org/doi:\1}{doi:\1}.',line)
+        line = p2.sub(r'href{http://dx.doi.org/doi:\1}{doi:\1}.',line)
         newlines.append(line)
         #print "line is: "
         #print line
