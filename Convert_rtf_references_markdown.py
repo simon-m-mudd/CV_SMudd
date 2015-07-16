@@ -61,7 +61,7 @@ def read_rtf_references(filename):
 
     # Sometimes italic is like this:
     for line in lines:
-        p3 = re.compile('\\\\{i{}( [^}]* )\\}', re.VERBOSE)
+        p3 = re.compile('{\\\\i{}( [^}]* )\\}', re.VERBOSE)
         line = p3.sub(r'*\1*',line)
         newlines.append(line)
         #print "line is: "
