@@ -75,7 +75,7 @@ def read_rtf_references(filename):
     # replace the dois with html links to doi.org
     for line in lines:
         p2 = re.compile('doi:( [^}]* ).\\\\', re.VERBOSE)
-        line = p2.sub(r'[doi:\1](href{http://dx.doi.org/doi:\1).',line)
+        line = p2.sub(r'[doi:\1](http://dx.doi.org/doi:\1).',line)
         newlines.append(line)
         #print "line is: "
         #print line
@@ -152,7 +152,7 @@ def read_rtf_references(filename):
         print "last year: " + str(last_year)        
         
         if this_year != last_year:
-            yearline = '\n##' + str(this_year)
+            yearline = '**01.** ' + str(this_year)
             fo.write(yearline)
             fo.write('\n \n \n')
         line = '  1. '+line
