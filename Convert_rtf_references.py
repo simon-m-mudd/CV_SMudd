@@ -132,7 +132,6 @@ def read_rtf_references(filename):
     fo.close()
 
 if __name__ == "__main__":
-    #fit_weibull_from_file(sys.argv[1])
-    filename = 'c:\\Users\\smudd\\Documents\\Latex_projects\\CV\\test.rtf'
+    filename = 'Test_refs.rtf'
     
     read_rtf_references(filename) 
