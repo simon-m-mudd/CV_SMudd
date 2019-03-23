@@ -54,7 +54,7 @@ def read_rtf_references(filename):
     for line in lines:
         #p = re.compile('\\\\i( [^}]* )\\\\i0{}', re.VERBOSE)
         p = re.compile('{\\\\i{}( [^}]* )}', re.VERBOSE)
-        line = p.sub(r'textit{\1}',line)
+        line = p.sub(r'\\textit{\1}',line)
         newlines.append(line)
         #print "line is: "
         #print line
