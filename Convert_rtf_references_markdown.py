@@ -29,11 +29,11 @@ def read_rtf_references(filename):
     lines = fi.readlines()
     newlines = []
     
-    print "Lines are: "
-    print lines
+    print ("Lines are: ")
+    print( lines)
 
     for line in lines:
-        print "line is: "
+        print ("line is: ")
         
         line = line.replace('\uc0\u8220{}', '\'')
         line = line.replace('\uc0\u8217{}', '\'')
@@ -103,32 +103,32 @@ def read_rtf_references(filename):
     # now get the year of the paper
     years = []    
     for line in lines:
-        print "line is: "
-        print line
+        print ("line is: ")
+        print (line)
         match = re.search('\d{4}', line).span()
         year= line[match[0]:match[1]]
-        print "date is: "
-        print year
+        print( "date is: ")
+        print (year)
         years.append(year) 
     
     # now sort the lines according to year 
     yeararray = np.asarray(years) 
     
-    print "ya length: " + str(len(years))
-    print "lines lenght: " + str(len(lines))
+    print( "ya length: " + str(len(years)))
+    print ("lines lenght: " + str(len(lines)))
     
     # sort and get the indices    
     sorted_index = yeararray.ravel().argsort()
     #reverse this index
     
-    print "sorted index is: "
-    print sorted_index    
+    print ("sorted index is: ")
+    print( sorted_index )   
     
     reversed_arr = np.fliplr([sorted_index])[0]
     sorted_index = reversed_arr
     
-    print "reversed sorted index is: "
-    print sorted_index
+    print ("reversed sorted index is: ")
+    print (sorted_index)
     
 
     newyears = []
@@ -148,8 +148,8 @@ def read_rtf_references(filename):
     for line in lines:
         
         this_year = newyears[i]
-        print "this year: " + str(this_year)
-        print "last year: " + str(last_year)        
+        print ("this year: " + str(this_year))
+        print( "last year: " + str(last_year) )       
         
         if this_year != last_year:
             yearline = '**01.** ' + str(this_year)

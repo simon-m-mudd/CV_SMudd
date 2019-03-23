@@ -6,9 +6,9 @@ This is [my](http://www.geos.ed.ac.uk/homes/smudd) CV, based loosely on the form
 
 You should compile with XeLaTeX.
 
-To get this to work you will need some free fonts; the URL of these fonts is in the source code. 
+To get this to work you will need some free fonts; in the source code there are some options but in addition the default font (Heuristica) is included in the repository. Please not the license in the font directory. 
 
-NOTE: Fo reasons that I have not been fully able to diagnose, this tex file results in quite a few errors.
+NOTE: For reasons that I have not been fully able to diagnose, this tex file results in quite a few errors.
 However, it produces a pdf with a nice-looking cv so I just ignore all the errors. 
 
 There are also some python scripts for automating generation of the components of the cv. 
@@ -23,8 +23,9 @@ First, you should have a citation engine like [Zotero](https://www.zotero.org/).
 I grabbed all my citations from (Web of Science](https://www.webofscience.com/) and imported them into a collection.
 The first time I tried this I grabbed everything from Google Scholar: don't do this!! It gives jumbled, malformatted reference records. 
 For example, the zotero conversions from Google Scholar seem to be missing the doi information, and the doi is used to make html links to papers. 
+Scopus seems also to work and is an alternative for Web of Science.
 
-Once you have your collection in Zotero, you can dowload your favourite [stylesheet](https://www.zotero.org/styles) and format a bibliography. 
+Once you have your collection in Zotero, you can donwload your favourite [stylesheet](https://www.zotero.org/styles) and format a bibliography. 
 Save the bibliography in rtf format. 
 
 Then, in a text editor (not Word!!), open the rtf and get rid of the codes at the beginning of the file before the first reference (they might look like this: {\rtf \li720 \fi-720 \sl240 \slmult1 \sa240 ) and the curly bracket at the end. 
@@ -63,7 +64,7 @@ Important: You need to do this every time you re-load the docker container!
 2. Then `apt-get install wget`
 3. Download the font `wget https://www.fontsquirrel.com/fonts/download/heuristica`
 4. Unzip it: `unzip heuristica`
-4. Go into the heirstica directory `cd heuristica`
+4. Go into the heuristica directory `cd heuristica`
 5. Make a directory in your fonts folder: `mkdir /usr/share/fonts/opentype/heuristica`
 6. Copy the fonts across
 7. `cp Heuristica-Bold.otf /usr/share/fonts/opentype/heuristica/Heuristica-Bold.otf`
@@ -73,3 +74,6 @@ Important: You need to do this every time you re-load the docker container!
 11. Update the fonts cache: `fc-cache -f -v`
 12. Done! That was easy, wasn't it!
 13. Now run the cv with `xelatex MuddCV_August2016.tex`
+
+If you want to check on your fonts, run `fc-list`. 
+You can also look for specific fonts `fc-list | grep "Heuristica"`
