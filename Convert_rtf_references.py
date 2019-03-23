@@ -24,21 +24,26 @@ import numpy as np
 
 
 def read_rtf_references(filename):
-    fi = open(filename, 'r')
-    fo = open("Parsed_refs.tex",'w')
+    fi = open(filename, 'r',encoding='utf-8')
+    fo = open("Parsed_refs.tex",'w', encoding='utf-8')
     lines = fi.readlines()
     newlines = []
     
     print("Lines are: ")
     print (lines)
 
+    # This bit was for replacing unicode but unicode works in the
+    # tex version I've got
     for line in lines:
-        print("line is: ")
-        
-        line = line.replace('\uc0\u8220{}', '\'')
-        line = line.replace('\uc0\u8217{}', '\'')
-        line = line.replace('\uc0\u8216{}', '\'')
-        line = line.replace('\uc0\u8211{}', '-')
+        #print("line is: ")  
+        #line = line.decode('latin-1')
+        line = line.replace("\\uc0\\u8220{}", '\'')
+        line = line.replace('\\uc0\\u8217{}', '\'')
+        line = line.replace('\\uc0\\u8216{}', '\'')
+        line = line.replace('\\uc0\\u8211{}', '-')
+        line = line.replace('\\uc0\\u8230{}', 'and')
+        line = line.replace('&', 'and')
+        line = line.rstrip()
         newlines.append(line)
 
     #reset the lines    
@@ -47,7 +52,8 @@ def read_rtf_references(filename):
     
     # now replace the rtf code for italics with the latex code
     for line in lines:
-        p = re.compile('\\\\i( [^}]* )\\\\i0{}', re.VERBOSE)
+        #p = re.compile('\\\\i( [^}]* )\\\\i0{}', re.VERBOSE)
+        p = re.compile('{\\\\i{}( [^}]* )}', re.VERBOSE)
         line = p.sub(r'textit{\1}',line)
         newlines.append(line)
         #print "line is: "
@@ -61,8 +67,11 @@ def read_rtf_references(filename):
 
     # replace the dois with html links to doi.org
     for line in lines:
-        p2 = re.compile('doi:( [^}]* ).\\\\', re.VERBOSE)
-        line = p2.sub(r'\href{http://dx.doi.org/doi:\1}{doi:\1}.',line)
+        # remove the last character to get rid of the "/" character
+        line = line[:-1]
+        p2 = re.compile('https:( [^}]* )', re.VERBOSE)
+        line = p2.sub(r'\href{https:\1}{https:\1}',line)
+        #line = p2.sub(r'\href{http://dx.doi.org/doi:\1}{doi:\1}.',line)
         newlines.append(line)
         #print "line is: "
         #print line
@@ -75,13 +84,21 @@ def read_rtf_references(filename):
     # now get the year of the paper
     years = []    
     for line in lines:
-        print("line is: ")
+        print("\n\nline is: ")
         print (line)
         match = re.search('\d{4}', line).span()
         year= line[match[0]:match[1]]
         print("date is: ")
         print (year)
         years.append(year) 
+        newline = "\\years{"+str(year)+"}\\hangindent=0.7cm\\textbf{N.}"+line+"\\par\n"
+        newlines.append(newline)
+        print("newline is: ")
+        print(newline)
+        
+    #reset the lines    
+    lines = newlines
+    newlines = [] 
     
     # now sort the lines according to year 
     yeararray = np.asarray(years) 
@@ -113,15 +130,15 @@ def read_rtf_references(filename):
     lines = newlines
     newlines = []
     for line in lines:
-        line = '\\hangindent=0.7cm\\textbf{N.}'+line
+        #line = '\\hangindent=0.7cm\\textbf{N.}'+line
         newlines.append(line)
         fo.write(line)
     
     
     
     #print out the lines to screen
-    print ("The newlines are: ")
-    print (newlines)    
+    #print ("The newlines are: ")
+    #print (newlines)    
     
     # Somme commented out code to test re
     #p = re.compile('\\\\i( [^}]* )\\\\i0{}', re.VERBOSE)
