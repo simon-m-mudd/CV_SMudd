@@ -57,6 +57,7 @@ For Simon's desktop computer the docker call is:
 To install the font (in this case the test is the Font Hack)
 
 Update: I am putting the font in the repo so you don't have to do steps 1-4.
+Important: You need to do this every time you re-load the docker container!
 
 1. The blang/latex container doesn't have all the stuff you need to get the font, so first run `apt-get update`
 2. Then `apt-get install wget`
