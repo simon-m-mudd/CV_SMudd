@@ -6,12 +6,10 @@ This is [my](http://www.geos.ed.ac.uk/homes/smudd) CV, based loosely on the form
 
 You should compile with XeLaTeX.
 
-To get this to work you will need some free fonts; in the source code there are some options but in addition the default font (Heuristica) is included in the repository. Please not the license in the font directory. 
+To get this to work you will need some free fonts; in the source code there are some options but in addition the default font (Heuristica) is included in the repository. Please note the license in the font directory. 
 
-NOTE: For reasons that I have not been fully able to diagnose, this tex file results in quite a few errors.
-However, it produces a pdf with a nice-looking cv so I just ignore all the errors. 
 
-There are also some python scripts for automating generation of the components of the cv. 
+There are also some python scripts for automating generation of the components of the cv, as well as a bash script in the font directory for automating installation of the font.  
 
 Convert_rtf_references.py
 ----------------------------------
@@ -34,7 +32,7 @@ Save this file and then use this filename as the input to the rtf converter.
 The rtf converter will then spit out another file, called 'Parsed_refs.tex'. 
 This isn't a tex file!! It is tex-formatted text that can be inserted into the CV. 
 
-Attempting to get the fonts to work
+The docker container
 ---------------------------------------------------------
 
 Okay, so this template is a little bit finicky. 
@@ -54,6 +52,17 @@ For Simon's laptop computer the docker call is:
 
 For Simon's desktop computer the docker call is:
 `docker run -it -v C:\Users\smudd\local_latex\CV_SMudd:/data blang/latex`
+
+Attempting to get the fonts to work
+---------------------------------------------------------
+
+1. Go into the heuristica directory whilst in the docker container
+2. Run the shell script: `sh activate_font.sh`
+
+
+Fonts the old and difficult way
+---------------------------------------------------------
+The below instructions are for historic purposes only
 
 To install the font (in this case the test is the Font Hack)
 
