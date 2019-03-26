@@ -42,10 +42,7 @@ I've tried to get it working with the docker latex container, which has all the 
 For getting the docker container working, the steps are:
 1. `docker pull blang/latex`
 2. `docker run -it -v C:\Path\to\repo:/data blang/latex`
-3. `pdflatex book.tex`
-4. `bibtex book`
-5. `pdflatex book.tex`
-6. `pdflatex book.tex`
+3. `xelatex MuddCV_April2019.tex` (or whichever version is the latest).
 
 For Simon's laptop computer the docker call is:
 `docker run -it -v C:\Users\smudd\Documents\papers_latex\CV_SMudd:/data blang/latex`

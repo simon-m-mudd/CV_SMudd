@@ -34,7 +34,7 @@ echo $thisdir/$bf
 echo "Copying files"
 if [ ! -f "$destdir$bf" ]
 then
-  cp $thisdir/$bif $destdir$bf
+  cp $thisdir/$bf $destdir$bf
 fi
 if [ ! -f "$destdir$bif" ]
 then
