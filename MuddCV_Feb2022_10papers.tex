@@ -1,0 +1,227 @@
+%-----------------------------------------------------
+% Simon M. Mudd CV
+%
+% This CV is loosely based on the template produced by
+% Dario Taraborelli
+% URL: http://nitens.org/taraborelli/cvtex
+%
+% NOTE: This gives a load of error messages but in the end produces 
+% a pdf of the cv, so I just ignore all the errors. 
+%
+%----------------------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.75in, textheight=9.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+%For gentium, you should install the font from here: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=Gentium_basic
+%\setromanfont [Ligatures={Common}, BoldFont={Gentium Basic Bold}, ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+
+%For fontin font, you should install the font from here: http://www.exljbris.com/fontin.html
+%\setromanfont [Ligatures={Common}, BoldFont={Fontin Bold}, ItalicFont={Fontin Italic}]{Fontin}
+
+%For linux libertine font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+% This one seems to be happiest! Least bad boxes. And looks nice
+%\setromanfont [Ligatures={Common}, BoldFont={Linux Libertine Bold}, ItalicFont={Linux Libertine Italic}]{Linux Libertine}
+
+%For Liberation Serif font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+%\setromanfont [Ligatures={Common}, BoldFont={Liberation Serif Bold}, ItalicFont={Liberation Serif Italic}]{Liberation Serif}
+
+%For Heuristica Serif font, you should install from fontsquirrel, http://www.fontsquirrel.com/
+% This one also seems to make XeLaTeX happy
+\setromanfont [Ligatures={Common}, BoldFont={Heuristica Bold}, ItalicFont={Heuristica Italic}]{Heuristica}
+
+%\setmonofont[Scale=0.8]{Monaco}
+
+%You can download fontawsome here: http://fontawesome.io/
+% once you unzip it you will need to go into the folder and install the fonts
+\usepackage{fontawesome}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+%columns
+\usepackage{multicol}
+\setlength{\columnsep}{10pt}
+%\def\columnseprulecolor{\color{White}}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Simon M. Mudd - vita},
+	pdfauthor={Simon M. Mudd},
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+
+%Colours
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{Gray}{rgb}{0.3,0.3,0.3}
+\definecolor{LightGray}{rgb}{0.6,0.6,0.6}
+
+% Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{LightGray}{Simon M. Mudd CV, 16 February, 2022}}
+\renewcommand{\footrulewidth}{1pt}
+\rfoot{\textcolor{LightGray}{Page \thepage}}
+
+%urls
+\usepackage{url}
+
+% DOCUMENT
+\begin{document}
+\sloppy
+{\LARGE Simon Marius Mudd}\\
+\textcolor{Gray}{\large{Professor of Earth Surface Processes}}\\[0.2cm]
+
+\begin{multicols}{2}
+University of Edinburgh\\
+School of GeoSciences\\
+Drummond Street\\
+Edinburgh, EH8 9XP\\
+United Kingdom
+
+\columnbreak
+
+Phone: \texttt{+44~(0)131~650~2535}\\
+Fax: \texttt{+44~(0)131~650~2524}\\
+email: \href{mailto:simon.m.mudd@ed.ac.uk}{simon.m.mudd@ed.ac.uk}\\
+Web: \href{http://www.geos.ed.ac.uk/homes/smudd/}{http://www.geos.ed.ac.uk/homes/smudd/}\\
+Google Scholar: \href{http://scholar.google.com/citations?user=9iv6l7wAAAAJ\&hl=en}{Username Simon M. Mudd}\\ 
+Github: \href{https://github.com/simon-m-mudd}{Username simon-m-mudd}
+
+\end{multicols}
+
+\hrule
+\section*{Appointments}
+\noindent
+\years{2016--}\textbf{Professor} of Earth Surface Processes: School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2014--2016}\textbf{Reader} in Landscape Dynamics: School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2013--2014}\textbf{Senior Lecturer} in Landscape Dynamics: School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2007--2013}\textbf{Lecturer} in Landscape Dynamics: School of GeoSciences, University of Edinburgh, UK\\[0.05cm]
+\years{2006--2007}\textbf{Research Associate}: Department of Earth and Environmental Sciences, Vanderbilt University, USA\\[0.05cm]
+
+
+\hrule
+\section*{Education}
+\noindent
+\years{2006}\textbf{PhD} in \textit{Environmental Engineering}, Vanderbilt University, Nashville TN, USA\\[0.05cm]
+\years{2001}\textbf{MA} in \textit{Geological Sciences}, University of California, Santa Barbara, CA, USA\\[0.05cm]
+\years{1999}\textbf{BA} in \textit{Geology} (minor in German) University of California, Berkeley, CA, USA\\[0.05cm]
+
+\hrule
+\section*{Awards and Fellowships}
+\noindent
+\years{2020}\textbf{Fellow of the Royal Society of Edinburgh}\\[0.05cm]
+\years{2014}\textbf{Gordon Warwick Medal} from the British Society for Geomorphology (for excellence in geomorphic research by someone within 15 years of PhD)\\[0.05cm]
+\years{2013}\textbf{Arne Richter Award} for Outstanding Young Scientists of the European Geosciences Union\\[0.05cm]
+
+\hrule
+\section*{Representative Leadership}
+\noindent
+\years{2018--2019}\textbf{Chair}, British Society for Geomorphology (In addition, was deputy and junior deputy chair in previous two years) \\[0.05cm]	
+\years{2016--2020}\textbf{Director}, Edinburgh E3/E4 NERC Doctoral Training Partnership\\[0.05cm]
+
+\hrule
+\section*{External Funding}
+\noindent
+\subsection*{As PI, since 2017}
+\years{2019-2029}E4 - Edinburgh Earth Ecology and Environment DTP (\href{https://nerc.ukri.org/funding/application/outcomes/awards/2018/dtp2-2018/}{NE/S007407/1; pending} )\\ Funding Agency: \textit{NERC}\\Award: \textbf{£7,874,280} based on 18 studentships for 5 years at £87k per student. Note that grantholder changed to Richard Essery after I finished my term as DTP head in 2020, FEC to Edinburgh\\[0.05cm] P.I. Simon M. Mudd\\[0.05cm]
+\years{2017-2023}Edinburgh NPIF studentships (NE/R009228/1)\\ Funding Agency: \textit{NERC}\\Award: \textbf{£496,522} FEC to Edinburgh\\[0.05cm] P.I. Simon M. Mudd (note these are only available to NERC DTP holders so only partially competitive)\\[0.05cm]
+\years{2019-2021}Pilot study "local topography"\\ Funding Agency: \textit{NAGRA}\\Award: \textbf{£105,203} FEC to Edinburgh\\[0.05cm] P.I. Simon M. Mudd\\[0.05cm]
+\years{2016-2017}Software for quantifying shallow landslide hazards to transportation infrastructure under changing climate and forest management (NE/N01300X/1)\\ Funding Agency: \textit{NERC}\\Award: \textbf{£126,795} FEC to Edinburgh\\[0.05cm] P.I. Simon M. Mudd\\[0.05cm]
+
+
+\hrule
+\section*{Editorial Activities}
+\years{2013--}\textbf{Associate Editor}, Earth Surface Dynamics\\[0.05cm]	
+\years{2008--2013}\textbf{Associate Editor}, Journal of Geophysical Research-Earth Surface\\[0.05cm]	
+\years{2009--2011}\textbf{Editorial Board}, Geology\\[0.05cm]	
+
+
+\hrule
+\section*{Recent Invited Talks}
+\years{2020}\textbf{Landscapes Live}, International geomorphology seminar series \href{https://www.youtube.com/watch?v=OPqV609tJwk}{Video}\\[0.05cm]  
+\years{2019}\textbf{School of Earth Sciences, University of Bristol}, Department seminar\\[0.05cm]  
+\years{2018}\textbf{Symposium on Coastal Resources and Environment (CORE), Hohai University, China}, Invited talk\\[0.05cm]
+\textbf{GFZ--Potsdam, Germany, Section 4.7 - Earth Surface Process Modelling}, Section Seminar\\[0.05cm]
+\textbf{GFZ--Potsdam, Germany, Section 5.1 - Geomorphology}, Section Seminar\\[0.05cm]
+\years{2017}\textbf{CNRS Toulouse, France}, Department Seminar\\[0.05cm]
+\textbf{Department of Geography, Durham University}, Department Seminar\\[0.05cm]
+
+
+\hrule
+\section*{Software}
+My group has released several software packages to the community, including:
+\subsection*{Tools}
+
+\years{Github}The LSDTopoTools software package for topographic analysis has a number of repositories located on the \href{https://github.com/LSDtopotools}{Github LSDTopoTools page}\par
+A variety of scripts for both computation and visualization can be found on my github page: username \href{https://github.com/simon-m-mudd}{simon-marius-mudd}\\
+\par
+
+\hrule
+\section*{10 Representative Publications}
+Click on the doi to link to the paper. 
+A number of these are behind paywalls, so alternatively see \href{https://www.research.ed.ac.uk/portal/en/persons/simon-mudd(597e4975-68c0-4175-8119-0d22d1438753).html}{the University of Edinburgh’s research explorer page, that includes green open access pdfs}. 
+Citation metrics can be found at \href{http://scholar.google.com/citations?user=9iv6l7wAAAAJ\&hl=en}{Google Scholar; username Simon M. Mudd}. 
+You can also see outputs via \href{https://publons.com/researcher/2825683/simon-m-mudd/}{publons (research ID F-8521-2010)} or \href{https://orcid.org/0000-0002-1357-8501}{ORCiD 0000-0002-1357-8501}.\\
+
+\years{2020}\hangindent=0.7cm Clubb, F.J., Mudd, S.M., Hurst, M.D., Grieve, S.W.D., (2020). Differences in channel and hillslope geometry record a migrating uplift wave at the Mendocino triple junction, California, USA. \textit{Geology} \textit{48}, 184–188. \href{https://doi.org/10.1130/G46939.1}{https://doi.org/10.1130/G46939.1}\par
+
+\years{2018}\hangindent=0.7cm Mudd, S.M., Clubb, F. J., Gailleton, B., and Hurst, M. D. (2018). How concave are river channels? \textit{Earth Surface Dynamics}, \textit{6}(2), 505-523. \href{https://doi.org/10.5194/esurf-6-505-2018}{https://doi.org/10.5194/esurf-6-505-2018}\par
+
+\years{2017}\hangindent=0.7cm Mudd, S.M. (2017). Detection of transience in eroding landscapes. \textit{Earth Surface Processes and Landforms}, \textit{42}(1), 24-41. \href{https://doi.org/10.1002/esp.3923}{https://doi.org/10.1002/esp.3923}\par
+
+\years{2016}\hangindent=0.7cm Harel, M.-A., Mudd, S. M., and Attal, M. (2016). Global analysis of the stream power law parameters based on worldwide 10Be denudation rates. \textit{Geomorphology}, \textit{268}, 184-196. \href{https://doi.org/10.1016/j.geomorph.2016.05.035}{https://doi.org/10.1016/j.geomorph.2016.05.035}\par
+
+\years{2015}\hangindent=0.7cm Milodowski, D. T., Mudd, S. M., and Mitchard, E. T. A. (2015a). Erosion rates as a potential bottom-up control of forest structural characteristics in the Sierra Nevada Mountains. \textit{Ecology}, \textit{96}(1), 31-38. \href{https://doi.org/10.1890/14-0649.1}{https://doi.org/10.1890/14-0649.1}\par
+
+\years{2014}\hangindent=0.7cm Mudd, S.M., Attal, M., Milodowski, D. T., Grieve, S. W. D., and Valters, D. A. (2014). A statistical framework to quantify spatial variation in channel gradients using the integral method of channel profile analysis. \textit{Journal of Geophysical Research: Earth Surface}, \textit{119}(2), 138-152. \href{https://doi.org/10.1002/2013JF002981}{https://doi.org/10.1002/2013JF002981}\par
+
+\years{2014}\hangindent=0.7cm\ Clubb, F. J., Mudd, S. M., Milodowski, D. T., Hurst, M. D., and Slater, L. J. (2014). Objective extraction of channel heads from high-resolution topographic data. \textit{Water Resources Research}, \textit{50}(5), 4283-4304. \href{https://doi.org/10.1002/2013WR015167}{https://doi.org/10.1002/2013WR015167}\par
+
+\years{2012}\hangindent=0.7cm Hurst, M. D., Mudd, S. M., Walcott, R., Attal, M., and Yoo, K. (2012). Using hilltop curvature to derive the spatial distribution of erosion rates. \textit{Journal of Geophysical Research: Earth Surface}, \textit{117}(2). \href{https://doi.org/10.1029/2011JF002057}{https://doi.org/10.1029/2011JF002057}\par
+
+\years{2012}\hangindent=0.7cm Kirwan, M. L., and Mudd, S. M. (2012). Response of salt-marsh carbon accumulation to climate change. \textit{Nature}, \textit{489}(7417), 550-553. \href{https://doi.org/10.1038/nature11440}{https://doi.org/10.1038/nature11440}\par
+
+\years{2010}\hangindent=0.7cm\ Mudd, S.M., D'Alpaos, A., and Morris, J. T. (2010). How does vegetation affect sedimentation on tidal marshes? Investigating particle capture and hydrodynamic controls on biologically mediated sedimentation. \textit{Journal of Geophysical Research: Earth Surface}, \textit{115}(3). \href{https://doi.org/10.1029/2009JF001566}{https://doi.org/10.1029/2009JF001566}\par
+
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+
+\end{document}
