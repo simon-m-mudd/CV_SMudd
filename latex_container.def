@@ -1,0 +1,31 @@
+Bootstrap: docker
+From: blang/latex
+
+%post
+    # Update and install system dependencies
+    apt-get update && apt-get install -y \
+        wget \
+        git \
+        unzip \
+        && apt-get clean
+
+    # Install Jupyter Book
+    wget https://www.fontsquirrel.com/fonts/download/heuristica
+    unzip heuristica
+    mkdir /usr/share/fonts/opentype/heuristica
+    cp ./heuristica/Heuristica-Bold.otf /usr/share/fonts/opentype/heuristica/Heuristica-Bold.otf
+    cp ./heuristica/Heuristica-BoldItalic.otf /usr/share/fonts/opentype/heuristica/Heuristica-BoldItalic.otf
+    cp ./heuristica/Heuristica-Italic.otf /usr/share/fonts/opentype/heuristica/Heuristica-Italic.otf
+    cp ./heuristica/Heuristica-Regular.otf /usr/share/fonts/opentype/heuristica/Heuristica-Regular.otf
+    fc-cache -f -v
+
+%environment
+    export PATH=/usr/local/bin:$PATH
+
+%labels
+    Author Simon Mudd
+    Version v1.0
+    Description "Container for building my CV"
+
+%runscript
+    exec "$@"

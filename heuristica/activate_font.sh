@@ -9,7 +9,7 @@ echo "We are here:"
 echo $thisdir
 
 # Get the destination directory
-destdir="/usr/share/fonts/opentype/heuristica/"
+destdir="~/.local/share/fonts/opentype/heuristica/"
 echo "Destdir is"
 echo $destdir
 
